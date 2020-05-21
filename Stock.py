@@ -33,6 +33,7 @@ class Stock(Finance):
 
     # Print out the company profile information (pretty)
     def getProfilePretty(self):
+        print(self.profile)
         print(f"{self.profile['profile']['companyName']} ({self.profile['symbol']})")
         print(f"CEO:            {self.profile['profile']['ceo']}")
         print(f"Industry:       {self.profile['profile']['industry']}")

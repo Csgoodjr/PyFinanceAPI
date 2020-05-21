@@ -1,3 +1,4 @@
+import os
 import json
 import requests
 from urllib.request import urlopen
@@ -10,7 +11,7 @@ class Finance:
 
     def __init__(self):
         self._api = "https://financialmodelingprep.com/api/v3/"
-
+        self._apiKey = os.environ.get("APIKEY")
 
     def formatVal(self,value):
         return format(float(value), ",.0f")

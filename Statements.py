@@ -7,12 +7,14 @@ from Finance import Finance
 class Statements(Finance):
 
     def __init__(self,ticker):
-        Finance.__init__(self)
-        self.ticker = ticker
+        Finance.__init__(self,ticker)
+        self.balanceSheet = self.loadData("balance-sheet-statement/")
+        self.incomeStatement = self.loadData("income-statement/")
+        self.cashFlowStatement = self.loadData("cash-flow-statement/")
 
     # Ticker/Company Identifier Getter
     def getTicker(self):
-        return self.ticker
+        return self._ticker
 
     # Ticker/Company Identifier Setter
     def setTicker(self,ticker):

@@ -1,30 +1,18 @@
+import os
+import json
+import time
+import math
 import argparse
 from Finance import Finance
-from Stock import Stock
-from Statements import Statements
-from Ratios import Ratios
+from Market import Market
 
 # Main Program Driver
 # Takes in commandline arguments
 if __name__ == "__main__":
-
-    
-    tickers = ['TSLA','AAPL','MSFT','SAP']
-    stocks = [Stock(i) for i in tickers]
+    tickers = ['TSLA','AAPL','MSFT']
+    stocks = [Finance(i) for i in tickers]
     for stock in stocks:
-        print(stock.getTicker())
-        print(stock.getCurrentPrice())
-        print(stock.getDailyLow())
-        print(stock.getDailyHigh())
-
-    """
-    tickers = ['TSLA','AAPL','MSFT','SAP']
-    statements = [Statements(i) for i in tickers]
-    for statement in statements:
-        print(statement.getBalanceSheet())
-    """
-
-    """
-    s = Statements('AAPL')
-    print(s.balanceSheet)
-    """
+        print(stock.getActualEPSTrend())
+        print(stock.getAvgActualEPS())
+        print(stock.getEstimatedEPSTrend())
+        print(stock.getAvgEstimatedEPS())

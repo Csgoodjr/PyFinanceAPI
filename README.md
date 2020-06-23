@@ -1,17 +1,18 @@
 # PyFinanceAPI
-This is a Python Wrapper for the FMP API
+This is a Python Trading API 
 
 # Purpose
 Designed to make accessing stock/financial statement information easy
+Provides an analysis of different companies on the stock market
+Implements a Trading API
 
 # Functionality
-
 	Stocks
-	- Gets the company profile and their most recent quote information
-	- Allows the user to get information from the json object by the element
-	- Prints out a "Pretty" version of the company profile
-	- Has the ability to launch the company's website with the method vistWebsite()
 	
 	Financial Statements
 
 	Financial Analytics
+
+	Markets
+
+	Trading

@@ -4,7 +4,7 @@ import time
 import math
 import argparse
 from Finance import Finance
-from Market import Market
+from Trader import *
 
 # Main Program Driver
 # Takes in commandline arguments
